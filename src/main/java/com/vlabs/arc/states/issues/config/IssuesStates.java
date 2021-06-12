@@ -1,6 +1,7 @@
 package com.vlabs.arc.states.issues.config;
 
 public enum IssuesStates {
+    START,
     BACKLOG,
     ANALYSIS,
     READY_FOR_DEV,
