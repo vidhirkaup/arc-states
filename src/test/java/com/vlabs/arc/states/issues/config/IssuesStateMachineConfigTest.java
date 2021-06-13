@@ -1,7 +1,6 @@
 package com.vlabs.arc.states.issues.config;
 
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,23 +13,17 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @Slf4j
 @SpringBootTest
-class IssuesStateMachineConfigTest {
+public class IssuesStateMachineConfigTest {
 
-    @Qualifier("issuesStateMachineFactory")
     @Autowired
+    @Qualifier("issuesStateMachineFactory")
     private StateMachineFactory<IssuesStates, IssuesTransition> stateMachineFactory;
 
     private StateMachine<IssuesStates, IssuesTransition> stateMachine;
 
     @BeforeEach
-    void setUp() {
+    public void setUp() {
         stateMachine = stateMachineFactory.getStateMachine();
-    }
-
-    @AfterEach
-    void tearDown() {
-        stateMachine = null;
-        stateMachineFactory = null;
     }
 
     @Test

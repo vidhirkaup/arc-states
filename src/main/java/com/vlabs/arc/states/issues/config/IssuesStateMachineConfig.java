@@ -193,9 +193,7 @@ public class IssuesStateMachineConfig extends EnumStateMachineConfigurerAdapter<
     }
 
     private Action<IssuesStates, IssuesTransition> reopen() {
-        return ctx -> {
-            log.info("create issue");
-        };
+        return null;
     }
 
     private Action<IssuesStates, IssuesTransition> released() {
@@ -251,6 +249,8 @@ public class IssuesStateMachineConfig extends EnumStateMachineConfigurerAdapter<
     }
 
     private Action<IssuesStates, IssuesTransition> createIssue() {
-        return null;
+        return ctx -> {
+            log.info("create issue");
+        };
     }
 }
