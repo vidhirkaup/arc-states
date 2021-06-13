@@ -193,7 +193,9 @@ public class IssuesStateMachineConfig extends EnumStateMachineConfigurerAdapter<
     }
 
     private Action<IssuesStates, IssuesTransition> reopen() {
-        return null;
+        return ctx -> {
+            log.info("create issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> released() {
