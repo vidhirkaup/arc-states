@@ -193,59 +193,87 @@ public class IssuesStateMachineConfig extends EnumStateMachineConfigurerAdapter<
     }
 
     private Action<IssuesStates, IssuesTransition> reopen() {
-        return null;
+        return ctx -> {
+            log.info("reopen issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> released() {
-        return null;
+        return ctx -> {
+            log.info("released issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> qaFailed() {
-        return null;
+        return ctx -> {
+            log.info("qaFailed issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> qaPassed() {
-        return null;
+        return ctx -> {
+            log.info("qaPassed issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> beginTesting() {
-        return null;
+        return ctx -> {
+            log.info("beginTesting issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> sendToQA() {
-        return null;
+        return ctx -> {
+            log.info("sendToQA issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> fastTrackToRelease() {
-        return null;
+        return ctx -> {
+            log.info("fastTrackToRelease issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> stopDevelopment() {
-        return null;
+        return ctx -> {
+            log.info("stopDevelopment issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> beginDevelopment() {
-        return null;
+        return ctx -> {
+            log.info("beginDevelopment issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> needMoreInfo() {
-        return null;
+        return ctx -> {
+            log.info("needMoreInfo issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> analysisComplete() {
-        return null;
+        return ctx -> {
+            log.info("analysisComplete issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> returnToBacklog() {
-        return null;
+        return ctx -> {
+            log.info("returnToBacklog issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> fastTrackToDev() {
-        return null;
+        return ctx -> {
+            log.info("fastTrackToDev issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> beginAnalysis() {
-        return null;
+        return ctx -> {
+            log.info("beginAnalysis issue");
+        };
     }
 
     private Action<IssuesStates, IssuesTransition> createIssue() {
